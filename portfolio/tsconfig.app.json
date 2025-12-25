@@ -22,7 +22,14 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    "baseUrl": "./",
+    "paths": {
+      "@sections/*": ["src/sections/*"],
+      "@components/*": ["src/components/*"],
+      "@layout/*": ["src/layout/*"]
+    }
   },
   "include": ["src"]
 }
