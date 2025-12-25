@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@theme {
+    --color-background: #0f1418;
+    --color-foreground: #f0f2f5;
+
+    --color-card: #141a1f;
+    --color-card-hover: #1e222b;
+
+    --color-primary: #20b2a6;
+    --color-primary-foreground: #ffffff;
+
+    --color-secondary: #1f2830;
+    --color-secondary-hover: #20b2a6;
+
+    --color-muted: #252e37;
+    --color-muted-foreground: #7a8491;
+
+    --color-border: #252e37;
+
+    --radius: 0.75rem;
+
+    --color-highlight: #20b2a6;
+    --color-surface: #1a2329;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--color-background);
+        color: var(--color-foreground);
+        font-family: Inter, sans-serif;
+    }
+}
