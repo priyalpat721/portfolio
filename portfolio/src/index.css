@@ -8,11 +8,11 @@
     --color-card: #141a1f;
     --color-card-hover: #1e222b;
 
-    --color-primary: #82119E;
+    --color-primary: #A248A7;
     --color-primary-foreground: #ffffff;
 
     --color-secondary: #1f2830;
-    --color-secondary-hover: #82119E;
+    --color-secondary-hover: #A248A7;
 
     --color-muted: #252e37;
     --color-muted-foreground: #7a8491;
@@ -21,7 +21,7 @@
 
     --radius: 0.75rem;
 
-    --color-highlight: #82119E;
+    --color-highlight: #A248A7;
     --color-surface: #1a2329;
 }
 
@@ -53,6 +53,16 @@
         backdrop-filter: blur(24px);
         border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
     }
+
+    .glow-text {
+        text-shadow: 0 0 1px var(--color-primary), 0 0 30px var(--color-primary), 0 0 1px var(--color-primary);
+    }
+
+    .glow-border {
+        box-shadow: 0 0 20px 10px
+            color-mix(in srgb, var(--color-primary) 50%, transparent);
+        inset: 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
+    }
 }
 
 @layer utilities {
@@ -69,7 +79,76 @@
             filter: blur(0);
         }
     }
+
+    @keyframes orbit {
+        from {
+            transform: rotate(0deg) translateX(16px);
+        }
+        to {
+            transform: rotate(360deg) translateX(16px);
+        }
+    }
+    
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
     .animate-fade-in {
         animation: fade-in 0.5s ease-in-out;
+    }
+
+    .animate-marquee {
+        animation: marquee 30s linear infinite;
+    }
+
+    .orbit {
+        animation: orbit 14s linear infinite;
+        will-change: transform;
+    }
+
+    .animation-delay-100 {
+        animation-delay: 100ms;
+    }
+
+    .animation-delay-200 {
+        animation-delay: 200ms;
+    }
+
+    .animation-delay-300 {
+        animation-delay: 300ms;
+    }
+
+    .animation-delay-400 {
+        animation-delay: 400ms;
+    }
+
+    .animation-delay-500 {
+        animation-delay: 500ms;
+    }
+
+    .animation-delay-600 {
+        animation-delay: 600ms;
+    }
+
+    .animation-delay-800 {
+        animation-delay: 800ms;
+    }
+
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
     }
 }
