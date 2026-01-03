@@ -155,8 +155,8 @@ export const Hero = () => {
                 <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
                     <span className="text-sm text-muted-foreground">Follow me on</span>
                     {[
-                        {icon: Github, href: "#"},
-                        {icon: Linkedin, href: "#"},
+                        {icon: Github, href: "https://github.com/priyalpat721"},
+                        {icon: Linkedin, href: "https://www.linkedin.com/in/patel-pri/"},
                     ].map((social, index) => (
                         <a key={index} href={social.href} className="p-2 rounded-full hover:bg-primary/10 hover:text-primary transition-colors duration-300">
                             {<social.icon className="w-5 h-5"/>}
