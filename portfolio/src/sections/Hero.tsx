@@ -147,7 +147,9 @@ export const Hero = () => {
                     <a href="#contact">
                         <Button size="lg">Contact Me <ArrowRight className="w-5 h-5" /></Button>
                     </a>
-                    <Button size="lg">Download CV <Download className="w-5 h-5" /></Button>
+                    <a href="/Priyal Patel Resume 2025.pdf" download="Priyal Patel Resume 2025.pdf">
+                        <Button size="lg">Download CV <Download className="w-5 h-5" /></Button>
+                    </a>
                 </div>
 
                 <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
