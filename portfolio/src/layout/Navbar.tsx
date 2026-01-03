@@ -36,7 +36,9 @@ export const Navbar = () => {
             </div>
 
             <div className="hidden md:block">
-                <Button>Contact Me</Button>
+                <a href="#contact">
+                    <Button>Contact Me</Button>
+                </a>
             </div>
 
             <button className="md:hidden p-2 text-foreground cursor-pointer"
@@ -54,7 +56,9 @@ export const Navbar = () => {
                     className="hover:text-foreground px-4 py-2 text-lg text-muted-foreground">{link.label}</a>
                 ))}
 
-                <Button onClick={() => setIsMobileMenuOpen(false)} size="sm">Contact Me</Button>
+                <a href="#contact">
+                    <Button onClick={() => setIsMobileMenuOpen(false)} size="sm">Contact Me</Button>
+                </a>
             </div>
         </div>}
     </header>

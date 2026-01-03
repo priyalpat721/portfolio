@@ -144,7 +144,9 @@ export const Hero = () => {
                     </p>
                 </div>
                 <div className="flex gap-4 flex-wrap animate-fade-in animation-delay-300">
-                    <Button size="lg">Contact Me <ArrowRight className="w-5 h-5" /></Button>
+                    <a href="#contact">
+                        <Button size="lg">Contact Me <ArrowRight className="w-5 h-5" /></Button>
+                    </a>
                     <Button size="lg">Download CV <Download className="w-5 h-5" /></Button>
                 </div>
 
